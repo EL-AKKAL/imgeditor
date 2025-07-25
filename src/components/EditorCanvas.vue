@@ -1,5 +1,8 @@
 <template>
-  <div class="!box-border w-full min-w-0 sm:min-w-80">
+  <div
+    id="editor-canvas-wrapper"
+    class="!box-border w-full min-w-0 sm:min-w-80"
+  >
     <canvas
       v-show="store.editedImage"
       ref="canvas"
