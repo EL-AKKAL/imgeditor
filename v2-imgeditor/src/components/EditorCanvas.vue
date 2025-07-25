@@ -1,15 +1,16 @@
 <template>
   <div class="!box-border w-full min-w-80">
     <canvas v-show="store.editedImage" ref="canvas" class="w-full h-full"></canvas>
-    <Placeholder v-show="!store.editedImage" />
+    <PlaceHolder v-show="!store.editedImage" />
   </div>
 </template>
 
 <script setup lang="ts">
 import { onMounted, ref, watch } from 'vue'
 import { useImageEditorStore } from '@/stores/editor'
-import Placeholder from '@/assets/image-placeholder.svg'
+import PlaceHolder from '@/components/PlaceHolder.vue'
 
+const imagePlaceholder = new URL('/image-placeholder.png', import.meta.url).href
 const store = useImageEditorStore()
 const canvas = ref<HTMLCanvasElement>()
 const ctx = ref<CanvasRenderingContext2D | null>(null)

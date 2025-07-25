@@ -2,6 +2,7 @@
 import Toolbar from '@/components/Toolbar.vue'
 import EditorCanvas from '@/components/EditorCanvas.vue'
 import FiltersPanel from '@/components/FiltersPanel.vue'
+// @ts-ignore
 import StickersPanel from '@/components/StickersPanel.vue'
 </script>
 
